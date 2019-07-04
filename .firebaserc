@@ -1,5 +1,6 @@
 {
-  "projects": 
-    "default": "burger-queen"
+  "projects": {
+    "default": "burger-queen",
+    "hosting": "burger-queen-92025"
   }
 }

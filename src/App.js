@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Create from './pages/Create';
+import Menu from './pages/Menu';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/salao" component={Salao} />
           <Route path="/cozinha" component={Cozinha} />
           <Route path="/create" component={Create} />
+          <Route path="/menu" component={Menu} />
         </header>
       </div>
     </Router>
