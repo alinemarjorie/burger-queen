@@ -1,17 +1,5 @@
 # Burger Queen
 
-## Índice
-
-* [1. Preâmbulo](#1-preâmbulo)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínima do
-  projeto](#5-critérios-de-aceitação-mínima-do-projeto)
-* [6. Dicas e leituras complementares](#7-dicas-e-leituras-complementares)
-
-***
-
 ## Resumo do projeto
 
 Um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma
