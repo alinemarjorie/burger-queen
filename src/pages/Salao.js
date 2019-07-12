@@ -63,7 +63,7 @@ const products = [
     }
   ];
 
-class Menu extends React.Component {
+class Salao extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -118,4 +118,4 @@ class Menu extends React.Component {
     }
 }
 
-export default Menu;
+export default Salao;

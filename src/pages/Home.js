@@ -43,7 +43,10 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="App-header">
+      <div className = "container">
+      <div className = "row">
+      < div className = "col-1" > </div>
+      < div className = "bg p-5 col-10 d-flex flex-column align-items-center" >
         <Figure>
           <Figure.Image
             width={171}
@@ -55,11 +58,14 @@ class Home extends React.Component {
         <input value={this.state.email}
           placeholder="email"
           onChange={(e) => this.handleChange(e, "email")} />
-        <input value={this.state.senha}
+        <input type="password" value={this.state.senha}
           placeholder="senha"
           onChange={(e) => this.handleChange(e, "senha")} />
-        <Button text="Login" onClick={this.signIn} />
+        <Button text="Entrar" onClick={this.signIn} />
         <Button text="Cadastre-se" onClick={this.create} />
+      </div>
+      < div className = "col-1" > </div>
+      </div>
       </div>
     )
   }

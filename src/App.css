@@ -2,11 +2,17 @@
   text-align: center;
 }
 
-.App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+body {
+  background-image: url("food-2379472_1920.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg {
+  background-color: rgb(255, 255, 255, .93);
+  border-radius: 5px;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 
 @keyframes App-logo-spin {
