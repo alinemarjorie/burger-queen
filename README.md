@@ -1,5 +1,7 @@
 # Burger Queen
 
+Projeto para o bootcamp da Laboratória com foco em conhecer o React.
+
 ## Resumo do projeto
 
 Um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma
