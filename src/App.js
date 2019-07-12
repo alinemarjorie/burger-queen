@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Home from './pages/Home';
-import Create from './pages/Create';
-import Salao from './pages/Salao';
+import Home from './pages/Login/Home';
+import Create from './pages/Login/Create';
+import Salao from './pages/Salão/Salao';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {

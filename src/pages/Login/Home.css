@@ -1,0 +1,11 @@
+body {
+    background-image: url("food-2379472_1920.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg {
+    background-color: rgb(255, 255, 255, .93);
+    border-radius: 5px;
+    margin-top: 20%;
+}

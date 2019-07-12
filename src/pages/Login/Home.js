@@ -1,8 +1,9 @@
 import React from 'react';
-import Button from '../Button'
-import firebase from '../firebaseConfig';
+import Button from '../../Button'
+import firebase from '../../firebaseConfig';
 import withFirebaseAuth from 'react-with-firebase-auth';
 import Figure from 'react-bootstrap/Figure';
+import './Home.css';
 
 const firebaseAppAuth = firebase.auth();
 const database = firebase.firestore();
@@ -14,6 +15,8 @@ class Home extends React.Component {
       nome: "",
       email: "",
       senha: "",
+      emailSignUp: "",
+      passwordSignUp: "",
       tipo: "cozinha"
     };
   }
@@ -25,16 +28,16 @@ class Home extends React.Component {
   }
 
   signIn = () => {
-    this.props.signInWithEmailAndPassword(this.state.email, this.state.senha)
-      .then((resp) => {
-        const id = resp.user.uid;
-        database.collection("users").doc(id).get()
-          .then(resp => {
-            const data = resp.data();
-            this.props.history.push(`/${data.tipo}`);
-          })
-
-      });
+     this.props.signInWithEmailAndPassword(this.state.email, this.state.password)
+       .then(() => {
+           if (this.props.user) {
+             database.collection("users").doc(this.props.user.uid).get()
+              .then(resp => {
+                const data = resp.data();
+                this.props.history.push(`/${data.tipo}`);
+              })
+            }
+        });
   }
 
   create = () => {

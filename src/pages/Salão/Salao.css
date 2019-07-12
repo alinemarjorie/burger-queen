@@ -1,0 +1,16 @@
+.bd {
+    background-color: #F8CBAE;
+}
+
+.orders {
+    background-color: white;
+    margin: 20% 0% 5% 0%;
+    border-radius: 5px;
+}
+
+.product {
+    background-color: white;
+    border: red solid 1px;
+    border-radius: 10px;
+    cursor: pointer;
+}

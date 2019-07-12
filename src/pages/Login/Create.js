@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../Button'
-import firebase from '../firebaseConfig';
+import Button from '../../Button'
+import firebase from '../../firebaseConfig';
 import withFirebaseAuth from 'react-with-firebase-auth';
 import Figure from 'react-bootstrap/Figure';
 
@@ -14,7 +14,7 @@ class Create extends React.Component {
       nome: "",
       email: "",
       senha: "",
-      tipo: "cozinha"
+      tipo: "salao"
     };
   }
 
@@ -28,8 +28,7 @@ class Create extends React.Component {
     this.props.createUserWithEmailAndPassword(this.state.email, this.state.senha)
       .then(resp => {
         if (resp) {
-          const id = resp.user.uid;
-          database.collection("users").doc(id).set({
+          database.collection("users").doc(this.props.user.uid).set({
             email: this.state.email,
             nome: this.state.nome,
             tipo: this.state.tipo
@@ -42,15 +41,15 @@ class Create extends React.Component {
   }
 
   signIn = () => {
-    this.props.signInWithEmailAndPassword(this.state.email, this.state.senha)
-      .then((resp) => {
-        const id = resp.user.uid;
-        database.collection("users").doc(id).get()
-          .then(resp => {
-            const data = resp.data();
-            this.props.history.push(`/${data.tipo}`);
-          })
-
+    this.props.signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then(() => {
+          if (this.props.user) {
+            database.collection("users").doc(this.props.user.uid).get()
+              .then(resp => {
+                const data = resp.data();
+                this.props.history.push(`/${data.tipo}`);
+              })
+          }
       });
   }
 
@@ -85,8 +84,8 @@ class Create extends React.Component {
             placeholder="senha"
             onChange={(e) => this.handleChange(e, "senha")} />
           <select onChange={(e) => this.handleChange(e, "tipo")}>
-            <option value="cozinha">Cozinha</option>
-            <option value="salao">Salão</option>
+            <option value="salao"> Salão </option>
+            <option value="cozinha">Cozinha</option>    
           </select>
           <Button text="Criar usuário" onClick={this.createUser} />
           <Button text="Voltar" onClick={this.back} />
