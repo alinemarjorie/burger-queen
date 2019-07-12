@@ -1,6 +1,6 @@
 # Burger Queen
 
-Projeto para o bootcamp da Laboratória com foco em conhecer o React.
+Projeto para o bootcamp da Laboratória com foco em conhecer React.
 
 ## Resumo do projeto
 
