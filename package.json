@@ -1,9 +1,9 @@
 {
   "name": "burger-queen-class",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "firebase": "^6.2.4",
+    "firebase": "^6.3.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",

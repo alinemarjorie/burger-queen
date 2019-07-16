@@ -58,11 +58,12 @@ class Home extends React.Component {
             src="img/icon.png"
           />
         </Figure>
-        <input value={this.state.email}
-          placeholder="email"
+        <input className="input" value={this.state.email}
+          placeholder="E-mail"
           onChange={(e) => this.handleChange(e, "email")} />
-        <input type="password" value={this.state.senha}
-          placeholder="senha"
+        <input className="input" value={this.state.senha}
+          type="password"
+          placeholder="Senha"
           onChange={(e) => this.handleChange(e, "senha")} />
         <Button text="Entrar" onClick={this.signIn} />
         <Button text="Cadastre-se" onClick={this.create} />

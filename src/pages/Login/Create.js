@@ -47,7 +47,7 @@ class Create extends React.Component {
             database.collection("users").doc(this.props.user.uid).get()
               .then(resp => {
                 const data = resp.data();
-                this.props.history.push(`/${data.tipo}`);
+                this.props.history.push(`/salao`);
               })
           }
       });
@@ -74,19 +74,15 @@ class Create extends React.Component {
               src="img/icon.png"
             />
           </Figure>
-          <input value={this.state.nome}
+          <input className="input" value={this.state.nome}
             placeholder="nome"
             onChange={(e) => this.handleChange(e, "nome")} />
-          <input value={this.state.email}
+          <input className="input" value={this.state.email}
             placeholder="email"
             onChange={(e) => this.handleChange(e, "email")} />
-          <input type="password" value={this.state.senha}
+          <input className="input" type="password" value={this.state.senha}
             placeholder="senha"
             onChange={(e) => this.handleChange(e, "senha")} />
-          <select onChange={(e) => this.handleChange(e, "tipo")}>
-            <option value="salao"> Salão </option>
-            <option value="cozinha">Cozinha</option>    
-          </select>
           <Button text="Criar usuário" onClick={this.createUser} />
           <Button text="Voltar" onClick={this.back} />
         </div>
