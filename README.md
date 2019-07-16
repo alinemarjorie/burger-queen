@@ -22,16 +22,8 @@ para a cozinha para que sejam preparados.
 * [x] Adicionar item ao pedido.
 * [x] Excluir item do pedido.
 * [x] Mostra _resumo_ do pedido com todos os itens e o total.
-* [x] Enviar para a cozinha (isso deve salvar o pedido).
+* [x] Enviar para a cozinha (isso deve salvar o pedido no banco de dados).
 
-#### HU 3: Ver pedidos na cozinha
 
-* [ ] Visualização de pedidos pendentes para produção.
-* [ ] Marcar pedido como como pronto para entrega.
-* [ ] Ver histórico dos pedidos.
 
-#### HU 4: Entrega de pedidos
-
-* [ ] Visualização de pedidos pendentes para entrega.
-* [ ] Marcar pedido como entregue ao cliente.
 
