@@ -16,11 +16,11 @@ const products = [
       price: 7,
     },
     {
-      name: "SANDUÍCHE DE PRESUNTO E QUEIJO",
+      name: "SANDUÍCHE DE PRESUNTO",
       price: 10,
     },
     {
-      name: "SUCO DE FRUTA NATURAL",
+      name: "SUCO DE FRUTA",
       price: 7,
     },
     {
@@ -142,8 +142,9 @@ class Salao extends React.Component {
         }, 0);
         return (
             <React.Fragment>
-              <div className="container d-flex">
-                  <div className="row orders d-flex flex-column col-sm-6 p-5">
+              <div className = "container pt-3 d-flex orders m-auto justify-content-around" >
+                <div className="row d-flex flex-column col-3">
+                  <header className="title">Cardápio</header>
                   {
                       products.map((product, i) => {
                           return <div key={i}>
@@ -153,29 +154,26 @@ class Salao extends React.Component {
                       })
                   }
                   </div>
-                  <div className="row orders d-flex flex-column col-sm-6">
+                  <div className="row d-flex flex-column col-3">
+                    <header className="title">Pedidos</header>
                   {
                       this.state.buy.map((product, i) => {
-                          return <div key={i} className="d-flex">
+                          return <div key={i} className="d-flex flex-column">
                           <p>{product.name}</p>
                           <p>Preço: {product.price * product.quant}</p>
-                          <p>Quantidade: {product.quant}</p>
-                          <button className="Transparent-bg" onClick={() => this.deleteClick(product)}>
-                          Excluir
-                          </button>
+                          <p>Quantidade: {product.quant} <i className="fas fa-trash" onClick={() => this.deleteClick(product)}> </i></p>
                           </div>
                       })
-                  }
-                  { 
-                    <section className="p-5">
-                      <input placeholder="Nome do Cliente" value={this.state.client}
-                          onChange={(e) => this.handleChange(e, "client")}></input>
+                  }  
+                  </div>               
+                  <div className="row d-flex flex-column col-3">
+                    <header className="title">Conta</header>
+                     <input placeholder="Nome do Cliente" value={this.state.client}
+                        onChange={(e) => this.handleChange(e, "client")}></input>
                       <p>Valor total = {total}</p>
                       <Button text="FECHAR PEDIDO" onClick={this.sendOrder} />
-                    </section>
-                  }
-                  </div>
-                  </div>
+                  </div>            
+              </div>
             </React.Fragment>
         )
     }

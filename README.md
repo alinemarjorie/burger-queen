@@ -8,7 +8,7 @@ Um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma
 interface em que se possa realizar pedidos, armazená-los e e enviá-los 
 para a cozinha para que sejam preparados.
 
-## Checklist (em construção)
+## Checklist
 
 #### HU 1: Perfil de usuário
 

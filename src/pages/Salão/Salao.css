@@ -1,16 +1,24 @@
-.bd {
-    background-color: #F8CBAE;
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+.title {
+    background-color: aquamarine;
 }
 
 .orders {
     background-color: white;
-    margin: 20% 0% 5% 0%;
-    border-radius: 5px;
 }
 
 .product {
     background-color: white;
     border: red solid 1px;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.product:hover {
+    background-color: red;
+    color: white;
+}
+
+.fa-trash{
     cursor: pointer;
 }
